@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.two_point_scan;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -6,7 +6,6 @@ import java.util.Arrays;
 public class FourSum {
     
     public ArrayList<ArrayList<Integer>> fourSum(int[] num, int target) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
         ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
         if(num == null || num.length < 4)
             return results;

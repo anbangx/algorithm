@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.palindrome;
 
 public class PalindromePartition3 {
     

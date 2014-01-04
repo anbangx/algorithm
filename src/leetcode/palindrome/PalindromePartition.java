@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.palindrome;
 import java.util.ArrayList;
 
 
@@ -9,27 +9,21 @@ public class PalindromePartition {
         ArrayList<ArrayList<String>> results = new ArrayList<ArrayList<String>>();
         if(s == null || s.length() == 0)
             return results;
-//        if(s.length() == 1){
-//            ArrayList<String> output = new ArrayList<String>();
-//            output.add(s);
-//            results.add(output);
-//            return results;
-//        }
         dfs(s, 0, new ArrayList<String>(), results);
         return results;
     }
     
-    public void dfs(String s, int start, ArrayList<String> output, ArrayList<ArrayList<String>> results){
+    public void dfs(String s, int start, ArrayList<String> candidate, ArrayList<ArrayList<String>> results){
         if(start == s.length()){
-            results.add(output);
+            results.add(new ArrayList<String>(candidate));
             return;
         }
         for(int len = 1; len < s.length() - start + 1; len++){
             if(isPalindrome(s, start, start + len - 1)){
                 String str = s.substring(start, start + len);
-                output.add(str);
-                dfs(s, start + len, new ArrayList<String>(output), results);
-                output.remove(output.size() - 1);
+                candidate.add(str);
+                dfs(s, start + len, candidate, results);
+                candidate.remove(candidate.size() - 1);
             }
         }
     }

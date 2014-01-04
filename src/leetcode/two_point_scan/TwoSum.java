@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.two_point_scan;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.two_point_scan;
 import java.util.Arrays;
 
 
@@ -10,8 +10,8 @@ public class ThreeSumClosest {
         if(num == null || num.length == 0)
             return 0;
         int len = num.length;
-        int minDiff = Integer.MAX_VALUE;
         Arrays.sort(num);
+        int minDiff = Integer.MAX_VALUE;
         int closestSum = 0;
         for(int i = 0; i < len; i++){
             int cursor = num[i];
@@ -26,7 +26,7 @@ public class ThreeSumClosest {
                         closestSum = cursor + num[start] + num[end];
                     }
                     start++;
-//                    while(start<end && num[start] == num[start-1]) start++;
+                    while(start<end && num[start] == num[start-1]) start++;
                 }
                 else{
                     if(minDiff > (cursor + num[start] + num[end]) - target){
@@ -34,11 +34,11 @@ public class ThreeSumClosest {
                         closestSum = cursor + num[start] + num[end];
                     }
                     end--;
-//                    while(start<end && num[end] == num[end+1]) end--;
+                    while(start<end && num[end] == num[end+1]) end--;
                 }
             }
-//            while(i < len - 1 && num[i + 1] == num[i])
-//                i++;
+            while(i < len - 1 && num[i + 1] == num[i])
+                i++;
         }
         return closestSum;
     }
