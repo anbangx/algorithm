@@ -1,4 +1,6 @@
-package leetcode;
+package leetcode.list.cyclefinding;
+
+import leetcode.ListNode;
 
 public class DetectCycle {
     
