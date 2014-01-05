@@ -9,20 +9,19 @@ public class PalindromePartition3 {
         int[] D = new int[len + 1];
         boolean[][] P = new boolean[len][len];
         for(int i = 0; i < len; i++)
-            D[i] = len - i - 1;
-            
+            D[i] = len - i;
+           
         // dp
         for(int i = len - 1; i >= 0; i--){
-            P[i][i] = true;
-            for(int j = i + 1; j < len; j++){
-                if(s.charAt(i) == s.charAt(j) && (j - i > 2 || P[i + 1][j - 1])){
+            for(int j = i; j < len; j++){
+                if(s.charAt(i) == s.charAt(j) && (j - i < 2 || P[i + 1][j - 1])){
                     P[i][j] = true;
                     D[i] = Math.min(D[i], D[j + 1] + 1);
                 }
             }
         }
         
-        return D[0];
+        return D[0] - 1;
     }
     
     public static void main(String[] args) {
