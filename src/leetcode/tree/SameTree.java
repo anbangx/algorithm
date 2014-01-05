@@ -1,8 +1,10 @@
-package leetcode;
+package leetcode.tree;
+
+import leetcode.TreeNode;
+
 public class SameTree {
 
     public boolean isSameTree(TreeNode p, TreeNode q) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
         if (p == null && q == null)
             return true;
         if (p == null || q == null)
@@ -11,7 +13,6 @@ public class SameTree {
     }
 
     public static void main(String[] args) {
-        SameTree st = new SameTree();
         
     }
 

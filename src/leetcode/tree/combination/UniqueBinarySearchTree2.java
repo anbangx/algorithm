@@ -1,5 +1,7 @@
-package leetcode;
+package leetcode.tree.combination;
 import java.util.ArrayList;
+
+import leetcode.TreeNode;
 
 
 public class UniqueBinarySearchTree2 {

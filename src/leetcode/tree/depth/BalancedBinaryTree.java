@@ -1,4 +1,4 @@
-package leetcode.tree;
+package leetcode.tree.depth;
 
 import leetcode.TreeNode;
 

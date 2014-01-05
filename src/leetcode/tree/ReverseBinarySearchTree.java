@@ -1,4 +1,6 @@
-package leetcode;
+package leetcode.tree;
+
+import leetcode.TreeNode;
 
 public class ReverseBinarySearchTree {
     
