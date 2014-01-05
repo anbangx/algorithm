@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.permutation;
 
 public class NextPermutation {
     
