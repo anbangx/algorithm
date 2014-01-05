@@ -1,6 +1,6 @@
-package leetcode;
+package leetcode.dp;
 
-public class InterleavingString2 {
+public class InterleavingString {
     
     public boolean isInterleave(String s1, String s2, String s3) {
         if(s3 == null || s3.length() == 0)
@@ -39,7 +39,7 @@ public class InterleavingString2 {
     }
     
     public static void main(String[] args) {
-        InterleavingString2 is = new InterleavingString2();
+        InterleavingString is = new InterleavingString();
         System.out.println(is.isInterleave("ab", "cb", "acbb"));
     }
 
