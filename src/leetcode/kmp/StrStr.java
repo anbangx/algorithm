@@ -1,4 +1,4 @@
-package leetcode.KMP;
+package leetcode.kmp;
 
 public class StrStr {
     
