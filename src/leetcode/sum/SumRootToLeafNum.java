@@ -1,20 +1,21 @@
-package leetcode;
+package leetcode.sum;
 
-public class SumRootToLeadNum {
+import leetcode.TreeNode;
+
+public class SumRootToLeafNum {
     
     public int sumNumbers(TreeNode root) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
         return generateSum(root, 0);
     }
     
-    public int generateSum(TreeNode root, int path){
+    public int generateSum(TreeNode root, int prePathSum){
         // best case
         if(root == null)
-            return 10 * path;
+            return 10 * prePathSum;
         if(root.left == null && root.right == null)
-            return 10 * path + root.val;
+            return 10 * prePathSum + root.val;
         
-        int curSum = 10 * path + root.val;
+        int curSum = 10 * prePathSum + root.val;
         int leftSum = 0;
         int rightSum = 0;
         if(root.left != null)
@@ -25,7 +26,7 @@ public class SumRootToLeadNum {
     }
     
     public static void main(String[] args) {
-        SumRootToLeadNum srtl = new SumRootToLeadNum();
+        SumRootToLeafNum srtl = new SumRootToLeafNum();
         TreeNode root = new TreeNode(1);
         TreeNode left = new TreeNode(0);
         TreeNode right = new TreeNode(2);
