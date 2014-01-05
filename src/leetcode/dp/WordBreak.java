@@ -1,9 +1,9 @@
-package leetcode;
+package leetcode.dp;
 import java.util.HashSet;
 import java.util.Set;
 
 
-public class WordBreak1 {
+public class WordBreak {
     
     public boolean wordBreak(String s, Set<String> dict) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
@@ -32,11 +32,11 @@ public class WordBreak1 {
     }
     
     public static void main(String[] args) {
-        WordBreak1 wb = new WordBreak1();
+        WordBreak wb = new WordBreak();
         Set<String> dict = new HashSet<>();
         dict.add("aaaa");
         dict.add("aa");
-        System.out.println(wb.wordBreak("aaaaaaa", dict));
+        System.out.println(wb.wordBreak("aaaaaa", dict));
         }
 
 }

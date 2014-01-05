@@ -1,12 +1,12 @@
-package leetcode;
-import java.util.Arrays;
+package leetcode.word;
+
 
 public class WordSearch {
 
     public boolean exist(char[][] board, String word) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
         // base case
-        if(word.length() == 0 || word == null)
+        if (word.length() == 0 || word == null)
             return true;
         // general case
         int numRows = board.length;
@@ -15,64 +15,64 @@ public class WordSearch {
             for (int j = 0; j < numColumns; j++) {
                 if (board[i][j] == word.charAt(0)) {
                     char[][] markedboard = new char[numRows][numColumns];
-                    for(int p = 0; p < numRows; p++){
-                        for(int q = 0; q < numColumns; q++)
+                    for (int p = 0; p < numRows; p++) {
+                        for (int q = 0; q < numColumns; q++)
                             markedboard[p][q] = board[p][q];
                     }
                     markedboard[i][j] = '1';
-                    if(BFS(i, j, markedboard, word.substring(1)))
+                    if (BFS(i, j, markedboard, word.substring(1)))
                         return true;
                 }
             }
         }
         return false;
     }
-    
-    public boolean BFS(int startRow, int startColumn, char[][] board, String word){
+
+    public boolean BFS(int startRow, int startColumn, char[][] board, String word) {
         // base case
-        if(word.length() == 0 || word == null)
+        if (word.length() == 0 || word == null)
             return true;
         // general case
         int numRows = board.length;
         int numColumns = board[0].length;
-        if(startRow - 1 >= 0 && board[startRow - 1][startColumn] == word.charAt(0)){
+        if (startRow - 1 >= 0 && board[startRow - 1][startColumn] == word.charAt(0)) {
             char[][] markedboard = new char[numRows][numColumns];
-            for(int p = 0; p < numRows; p++){
-                for(int q = 0; q < numColumns; q++)
+            for (int p = 0; p < numRows; p++) {
+                for (int q = 0; q < numColumns; q++)
                     markedboard[p][q] = board[p][q];
             }
             markedboard[startRow - 1][startColumn] = '1';
-            if(BFS(startRow - 1, startColumn, markedboard, word.substring(1)))
+            if (BFS(startRow - 1, startColumn, markedboard, word.substring(1)))
                 return true;
         }
-        if(startRow + 1 < numRows && board[startRow + 1][startColumn] == word.charAt(0)){
+        if (startRow + 1 < numRows && board[startRow + 1][startColumn] == word.charAt(0)) {
             char[][] markedboard = new char[numRows][numColumns];
-            for(int p = 0; p < numRows; p++){
-                for(int q = 0; q < numColumns; q++)
+            for (int p = 0; p < numRows; p++) {
+                for (int q = 0; q < numColumns; q++)
                     markedboard[p][q] = board[p][q];
             }
             markedboard[startRow + 1][startColumn] = '1';
-            if(BFS(startRow + 1, startColumn, markedboard, word.substring(1)))
+            if (BFS(startRow + 1, startColumn, markedboard, word.substring(1)))
                 return true;
         }
-        if(startColumn - 1 >= 0 && board[startRow][startColumn - 1] == word.charAt(0)){
+        if (startColumn - 1 >= 0 && board[startRow][startColumn - 1] == word.charAt(0)) {
             char[][] markedboard = new char[numRows][numColumns];
-            for(int p = 0; p < numRows; p++){
-                for(int q = 0; q < numColumns; q++)
+            for (int p = 0; p < numRows; p++) {
+                for (int q = 0; q < numColumns; q++)
                     markedboard[p][q] = board[p][q];
             }
             markedboard[startRow][startColumn - 1] = '1';
-            if(BFS(startRow, startColumn - 1, markedboard, word.substring(1)))
+            if (BFS(startRow, startColumn - 1, markedboard, word.substring(1)))
                 return true;
         }
-        if(startColumn + 1 < numColumns && board[startRow][startColumn + 1 ] == word.charAt(0)){
+        if (startColumn + 1 < numColumns && board[startRow][startColumn + 1] == word.charAt(0)) {
             char[][] markedboard = new char[numRows][numColumns];
-            for(int p = 0; p < numRows; p++){
-                for(int q = 0; q < numColumns; q++)
+            for (int p = 0; p < numRows; p++) {
+                for (int q = 0; q < numColumns; q++)
                     markedboard[p][q] = board[p][q];
             }
             markedboard[startRow][startColumn + 1] = '1';
-            if(BFS(startRow, startColumn + 1, markedboard, word.substring(1)))
+            if (BFS(startRow, startColumn + 1, markedboard, word.substring(1)))
                 return true;
         }
         return false;

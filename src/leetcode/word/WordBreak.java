@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.word;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -22,27 +22,27 @@ public class WordBreak {
     }
     
     public static void main(String[] args) {
-        WordBreak wordBread = new WordBreak();
+        WordBreak wordBreak = new WordBreak();
         String s = "";
         Set<String> dict = new HashSet<String>();
         // testcase 1
         s = "leetcode";
         dict.add("leet");
         dict.add("code");
-        System.out.println(wordBread.wordBreak(s, dict));
+        System.out.println(wordBreak.wordBreak(s, dict));
         // testcase 2
         dict.clear();
         dict.add("lee");
         dict.add("t");
         dict.add("code");
-        System.out.println(wordBread.wordBreak(s, dict));
+        System.out.println(wordBreak.wordBreak(s, dict));
         // testcase 3
         dict.clear();
         dict.add("lee");
         dict.add("t");
         dict.add("co");
         dict.add("de");
-        System.out.println(wordBread.wordBreak(s, dict));
+        System.out.println(wordBreak.wordBreak(s, dict));
         // testcase 4
         s = "bb";
         dict.clear();
@@ -50,14 +50,14 @@ public class WordBreak {
         dict.add("b");
         dict.add("bb");
         dict.add("bbbb");
-        System.out.println(wordBread.wordBreak(s, dict));
+        System.out.println(wordBreak.wordBreak(s, dict));
         
         // testcase 5
         s = "aaaaaaa";
         dict.clear();
         dict.add("aaaa");
         dict.add("aaa");
-        System.out.println(wordBread.wordBreak(s, dict));
+        System.out.println(wordBreak.wordBreak(s, dict));
     }
 
 }
