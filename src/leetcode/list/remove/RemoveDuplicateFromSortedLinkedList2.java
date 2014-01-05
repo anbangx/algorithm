@@ -1,14 +1,15 @@
-package leetcode;
+package leetcode.list.remove;
 
-public class RemoveDuplicateFromSortedLinkedList {
+import leetcode.ListNode;
+
+public class RemoveDuplicateFromSortedLinkedList2 {
     
     public ListNode deleteDuplicates(ListNode head) {
         // IMPORTANT: Please reset any member data you declared, as
-        ListNode prev = new ListNode(0);
-        prev.next = head;
-        head = prev;
+        ListNode safeGuard = new ListNode(0);
+        safeGuard.next = head;
         
-        ListNode n1=head;
+        ListNode n1=safeGuard;
         while(n1.next!=null){
             ListNode n2=n1.next;
             while(n2.next!=null && n2.next.val==n2.val){
@@ -20,11 +21,11 @@ public class RemoveDuplicateFromSortedLinkedList {
                 n1=n1.next;   
             }
         }
-        return head.next;
+        return safeGuard.next;
     }
     
     public static void main(String[] args) {
-        RemoveDuplicateFromSortedLinkedList rd = new RemoveDuplicateFromSortedLinkedList();
+        RemoveDuplicateFromSortedLinkedList2 rd = new RemoveDuplicateFromSortedLinkedList2();
         ListNode head = new ListNode(1);
         ListNode second = new ListNode(1);
         ListNode third = new ListNode(2);

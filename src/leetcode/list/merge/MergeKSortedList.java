@@ -1,5 +1,7 @@
-package leetcode;
+package leetcode.list.merge;
 import java.util.ArrayList;
+
+import leetcode.ListNode;
 
 
 public class MergeKSortedList {
@@ -20,11 +22,11 @@ public class MergeKSortedList {
         }
         if(newLists.isEmpty())
             return null;
-        int max = 0;
+        int min = Integer.MAX_VALUE;
         int index = 0;
         for(int i = 0; i < newLists.size(); i++){
-            if(max < newLists.get(i).val){
-                max = newLists.get(i).val;
+            if(min > newLists.get(i).val){
+                min = newLists.get(i).val;
                 index = i;
             }
         }

@@ -1,4 +1,6 @@
-package leetcode;
+package leetcode.list.remove;
+
+import leetcode.ListNode;
 
 public class RemoveNthNodeFromEnd {
     
