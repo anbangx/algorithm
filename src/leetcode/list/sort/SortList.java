@@ -1,4 +1,6 @@
-package leetcode;
+package leetcode.list.sort;
+
+import leetcode.ListNode;
 
 public class SortList {
     

@@ -1,21 +1,22 @@
-package leetcode;
+package leetcode.deepcopy;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
+import leetcode.RandomListNode;
+
 
 public class CopyListWithRandomPointer {
     
     public RandomListNode copyRandomList(RandomListNode head) {
-        // IMPORTANT: Please reset any member data you declared, as
-        // the same Solution instance will be reused for each test case.
         if(head == null)
             return null;
         LinkedList<RandomListNode> queue = new LinkedList<RandomListNode>();
         queue.add(head);
         RandomListNode cloneHead = new RandomListNode(head.label);
+        // map helps memorize the relative position of the random node to the current node
         Map<RandomListNode, RandomListNode> real2Clone = new HashMap<RandomListNode, RandomListNode>();
         real2Clone.put(head, cloneHead);
         
@@ -24,6 +25,7 @@ public class CopyListWithRandomPointer {
             RandomListNode cur = queue.removeFirst();
             if(visited.contains(cur))
                 continue;
+            // copy self
             RandomListNode clone;
             if(real2Clone.containsKey(cur))
                 clone = real2Clone.get(cur);
@@ -31,6 +33,7 @@ public class CopyListWithRandomPointer {
                 clone = new RandomListNode(cur.label);
                 real2Clone.put(cur, clone);
             }
+            // copy next
             if(cur.next != null){
                 RandomListNode cloneNext;
                 if(real2Clone.containsKey(cur.next))
@@ -42,6 +45,7 @@ public class CopyListWithRandomPointer {
                 clone.next = cloneNext;
                 queue.add(cur.next);
             }
+            // copy random
             if(cur.random != null){
                 RandomListNode cloneRandom;
                 if(real2Clone.containsKey(cur.random))

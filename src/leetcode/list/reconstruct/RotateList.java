@@ -1,19 +1,22 @@
-package leetcode;
+package leetcode.list.reconstruct;
+
+import leetcode.ListNode;
 
 public class RotateList {
     
     public ListNode rotateRight(ListNode head, int n) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
         int length = 0;
         ListNode cur = head;
+        // step1: get the whole length of the list
         while(cur != null){
             length++;
             cur = cur.next;
         }
         if(length == 0)
             return head;
-        
+        // step2: compute the rotate position
         n = n % length;
+        // step3: cut the list from the rotate position
         if(n == 0 || n == length)
             return head;
         ListNode prev = null; 
@@ -24,6 +27,7 @@ public class RotateList {
             cur = cur.next;
         }
         prev.next = null;
+        // step4: link the front part to the last part
         ListNode newHead = cur; 
         while(cur.next != null)
             cur = cur.next;
