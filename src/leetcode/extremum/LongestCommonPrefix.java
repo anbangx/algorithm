@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.extremum;
 
 public class LongestCommonPrefix {
     
@@ -10,7 +10,7 @@ public class LongestCommonPrefix {
         strs[0] = strs[0].substring(1);
         int i;
         for(i = 1; i < strs.length; i++){
-            if(strs[i].length() == 0 ||commonChar != strs[i].charAt(0))
+            if(strs[i].length() == 0 || commonChar != strs[i].charAt(0))
                 return "";
             strs[i] = strs[i].substring(1);
         }

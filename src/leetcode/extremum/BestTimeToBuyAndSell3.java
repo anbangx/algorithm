@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.extremum;
 
 public class BestTimeToBuyAndSell3 {
     

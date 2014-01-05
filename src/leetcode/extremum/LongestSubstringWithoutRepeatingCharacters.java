@@ -1,9 +1,9 @@
-package leetcode;
+package leetcode.extremum;
+
 import java.util.HashSet;
 import java.util.Set;
 
-
-public class LongestUniqueSubstring {
+public class LongestSubstringWithoutRepeatingCharacters {
     
     public int lengthOfLongestSubstring(String s) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
@@ -34,7 +34,7 @@ public class LongestUniqueSubstring {
     }
     
     public static void main(String[] args) {
-        LongestUniqueSubstring lus = new LongestUniqueSubstring();
+        LongestSubstringWithoutRepeatingCharacters lus = new LongestSubstringWithoutRepeatingCharacters();
         // abcabcbb bbbbb
         System.out.println(lus.lengthOfLongestSubstring("abcabcbb"));
     }

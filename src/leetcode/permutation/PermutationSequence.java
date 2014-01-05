@@ -3,7 +3,6 @@ package leetcode.permutation;
 public class PermutationSequence {
     
     public String getPermutation(int n, int k) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
         if(n == 0)
             return "";
         
