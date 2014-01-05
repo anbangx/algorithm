@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.parentheses;
 import java.util.ArrayList;
 
 
