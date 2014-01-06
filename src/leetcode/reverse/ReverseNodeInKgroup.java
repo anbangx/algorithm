@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.reverse;
 
 import leetcode.data.ListNode;
 

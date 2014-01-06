@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.data;
 public class RandomListNode {
     public int label;
     public RandomListNode next, random;

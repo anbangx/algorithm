@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
-import leetcode.RandomListNode;
+import leetcode.data.RandomListNode;
 
 
 public class CopyListWithRandomPointer {

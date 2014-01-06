@@ -7,6 +7,7 @@ import leetcode.data.TreeNode;
 
 public class BinaryTreeZigzagLevelOrderTraversal {
     
+    @SuppressWarnings("unchecked")
     public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
         ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
         if(root == null)

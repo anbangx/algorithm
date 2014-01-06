@@ -1,4 +1,4 @@
-package leetcode.list.reconstruct;
+package leetcode.reverse;
 
 import leetcode.data.ListNode;
 

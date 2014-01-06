@@ -1,4 +1,4 @@
-package leetcode.list.remove;
+package leetcode.removeduplicate;
 
 import leetcode.data.ListNode;
 

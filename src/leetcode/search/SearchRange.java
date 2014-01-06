@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.search;
 
 public class SearchRange {
 

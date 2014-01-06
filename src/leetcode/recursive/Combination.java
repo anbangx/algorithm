@@ -1,7 +1,6 @@
 package leetcode.recursive;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
+
 
 public class Combination {
 
@@ -33,7 +32,7 @@ public class Combination {
                 pickSelf.add(singleSet);
             }
         }
-        
+
         results.addAll(nopickSelf);
         results.addAll(pickSelf);
         return results;
