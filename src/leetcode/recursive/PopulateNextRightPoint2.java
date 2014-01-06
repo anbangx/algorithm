@@ -1,8 +1,8 @@
-package leetcode;
+package leetcode.recursive;
 
 import leetcode.data.TreeLinkNode;
 
-public class PopulateNextRightPoint {
+public class PopulateNextRightPoint2 {
 
     public void connect(TreeLinkNode root) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
