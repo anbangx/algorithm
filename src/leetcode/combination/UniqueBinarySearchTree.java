@@ -1,4 +1,4 @@
-package leetcode.tree.combination;
+package leetcode.combination;
 
 public class UniqueBinarySearchTree {
     

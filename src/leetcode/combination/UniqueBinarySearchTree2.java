@@ -1,4 +1,4 @@
-package leetcode.tree.combination;
+package leetcode.combination;
 import java.util.ArrayList;
 
 import leetcode.data.TreeNode;
