@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.dp;
 
 public class DecodeWay {
     
@@ -11,8 +11,6 @@ public class DecodeWay {
         }
         if(s.length() == 1)
             return check(s.charAt(0));
-        if(s.charAt(0) == '0')
-            return 0;
         
         int count1 = check(s.charAt(0));
         int count2 = check(s.charAt(0), s.charAt(1)) + (s.charAt(1) == '0' ? 0 : count1);

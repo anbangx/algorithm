@@ -1,4 +1,4 @@
-package leetcode.string;
+package leetcode.convert;
 
 public class StringToInteger {
     

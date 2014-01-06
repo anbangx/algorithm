@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.recursive;
 
 public class SpiralMatrix2 {
     

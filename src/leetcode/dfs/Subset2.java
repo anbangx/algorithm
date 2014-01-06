@@ -1,11 +1,11 @@
-package leetcode;
+package leetcode.dfs;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 
-public class Subset1 {
+public class Subset2 {
     
-    public ArrayList<ArrayList<Integer>> subsets(int[] S) {
+    public ArrayList<ArrayList<Integer>> subsetsWithDup(int[] S) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
         ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
         ArrayList<Integer> output = new ArrayList<Integer>();
@@ -26,13 +26,15 @@ public class Subset1 {
             if(i < S.length - 1)
                 genSubset(S, i + 1, output, results);
             output.remove(output.size() - 1);
+            while(i < S.length - 1 && S[i+1] == S[i])
+                i++;
         }
     }
     
     public static void main(String[] args) {
-        Subset1 ss = new Subset1();
-        int[] S = {0, 1};
-        System.out.println(ss.subsets(S));
+        Subset2 ss = new Subset2();
+        int[] S = {1, 2, 2};
+        System.out.println(ss.subsetsWithDup(S));
     }
 
 }

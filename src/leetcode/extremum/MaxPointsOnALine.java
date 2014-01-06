@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.extremum;
 import java.util.ArrayList;
 import java.util.HashMap;
 

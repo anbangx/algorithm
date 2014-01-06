@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.convert;
 
 public class WildcardMatching {
     
