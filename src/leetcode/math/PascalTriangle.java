@@ -1,8 +1,8 @@
-package leetcode;
+package leetcode.math;
 import java.util.ArrayList;
 
 
-public class PascalTiangle {
+public class PascalTriangle {
     
     public ArrayList<ArrayList<Integer>> generate(int numRows) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
@@ -27,7 +27,7 @@ public class PascalTiangle {
     }
     
     public static void main(String[] args) {
-        PascalTiangle pt = new PascalTiangle();
+        PascalTriangle pt = new PascalTriangle();
         System.out.println(pt.generate(5));
     }
 
