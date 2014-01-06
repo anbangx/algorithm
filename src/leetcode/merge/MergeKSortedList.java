@@ -1,8 +1,7 @@
-package leetcode.list.merge;
+package leetcode.merge;
 import java.util.ArrayList;
 
-import leetcode.ListNode;
-
+import leetcode.data.ListNode;
 
 public class MergeKSortedList {
     

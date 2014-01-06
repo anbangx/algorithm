@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import leetcode.TreeNode;
+import leetcode.data.TreeNode;
 
 public class BinaryTreeLevelOrderTraversal2 {
     

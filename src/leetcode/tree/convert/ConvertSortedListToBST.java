@@ -1,7 +1,7 @@
 package leetcode.tree.convert;
 
-import leetcode.ListNode;
-import leetcode.TreeNode;
+import leetcode.data.ListNode;
+import leetcode.data.TreeNode;
 
 public class ConvertSortedListToBST {
 

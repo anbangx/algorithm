@@ -1,6 +1,6 @@
 package leetcode.list.cyclefinding;
 
-import leetcode.ListNode;
+import leetcode.data.ListNode;
 
 public class LinkedListCycle2 {
 

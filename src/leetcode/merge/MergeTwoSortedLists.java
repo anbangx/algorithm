@@ -1,6 +1,6 @@
-package leetcode.list.merge;
+package leetcode.merge;
 
-import leetcode.ListNode;
+import leetcode.data.ListNode;
 
 public class MergeTwoSortedLists {
     

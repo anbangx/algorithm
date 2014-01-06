@@ -1,6 +1,6 @@
 package leetcode.math;
 
-import leetcode.ListNode;
+import leetcode.data.ListNode;
 
 public class AddTwoNumbers {
     

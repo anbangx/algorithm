@@ -1,6 +1,6 @@
 package leetcode.tree.depth;
 
-import leetcode.TreeNode;
+import leetcode.data.TreeNode;
 
 public class MaximumDepthOfBinaryTree {
     

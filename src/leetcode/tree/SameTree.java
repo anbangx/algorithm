@@ -1,6 +1,6 @@
 package leetcode.tree;
 
-import leetcode.TreeNode;
+import leetcode.data.TreeNode;
 
 public class SameTree {
 

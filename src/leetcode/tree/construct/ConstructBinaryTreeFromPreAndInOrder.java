@@ -1,6 +1,6 @@
 package leetcode.tree.construct;
 
-import leetcode.TreeNode;
+import leetcode.data.TreeNode;
 
 public class ConstructBinaryTreeFromPreAndInOrder {
     

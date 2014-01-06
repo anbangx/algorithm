@@ -2,6 +2,8 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import leetcode.data.Point;
+
 public class MaxPointsOnALine {
 
     public int maxPoints(Point[] points) {

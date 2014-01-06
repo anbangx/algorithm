@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.data.ListNode;
+
 public class ReverseNodeInKgroup {
     
     public ListNode reverseKGroup(ListNode head, int k) {

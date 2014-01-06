@@ -1,6 +1,6 @@
 package leetcode.list.sort;
 
-import leetcode.ListNode;
+import leetcode.data.ListNode;
 
 public class InsertionSortList {
 

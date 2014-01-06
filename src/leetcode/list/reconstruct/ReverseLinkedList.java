@@ -1,6 +1,6 @@
 package leetcode.list.reconstruct;
 
-import leetcode.ListNode;
+import leetcode.data.ListNode;
 
 public class ReverseLinkedList {
     
