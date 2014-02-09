@@ -10,13 +10,15 @@ public class QuickSortSinglyLinkedList {
 	}
 	
 	public ListNode quickSort(ListNode head, ListNode tail){
-	    if(head == null || head.next == null)
+	    if(head == null || head.next == null || head == tail)
 	        return head;
 	    
 	    Result r = new Result();
 	    ListNode pivot = partition(head, tail, r);
-	    ListNode firstTail = findTail(r.newHead, pivot);
-	    quickSort(r.newHead, firstTail);
+	    if(r.newHead != null){
+		    ListNode firstTail = findTail(r.newHead, pivot);
+		    quickSort(r.newHead, firstTail);
+	    }
 	    quickSort(pivot.next, r.newTail);
 	    return r.newHead;
 	}
@@ -38,8 +40,10 @@ public class QuickSortSinglyLinkedList {
 	            }
 	            ListNode temp = cur.next;
 	            if(r.newTail == null){
+	            	cur.next = pivot.next;
 	                pivot.next = cur;
 	            } else{
+	            	cur.next = r.newTail.next;
 	                r.newTail.next = cur;
 	            }
 	            r.newTail = cur;
@@ -65,7 +69,8 @@ public class QuickSortSinglyLinkedList {
 	
 	public static void main(String[] args) {
 		int[] A = {5, 20, 4, 3, 30};
-		test(A);
+		int[] B = {5, 20, 4};
+		test(B);
 	}
 	
 	public static void test(int[] A){
@@ -73,8 +78,8 @@ public class QuickSortSinglyLinkedList {
 		System.out.println("Testing...");
 		ListNode head1 = ListNode.convertArrayToLinkedList(A);
 		ListNode.print(head1);
-		qs.quickSort(head1, findTail(head1));
-		ListNode.print(head1);
+		ListNode result = qs.quickSort(head1, findTail(head1));
+		ListNode.print(result);
 	}
 
 }
