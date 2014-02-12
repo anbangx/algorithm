@@ -61,15 +61,16 @@ public class SerializeDeserializeTree {
 	}
 	
 	int idx = 0;
-	public TreeNode preorderRead(TreeNode root, String str){
+	public TreeNode preorderRead(String str){
 		if(idx == str.length())
-			return root;
+			return null;
 		char c = str.charAt(idx);
 		idx++;
+		TreeNode root = null;
 		if(c != '#'){
 			root = new TreeNode(c - '0');
-			preorderRead(root.left, str);
-			preorderRead(root.right, str);
+			root.left = preorderRead(str);
+			root.right = preorderRead(str);
 		}
 		return root;
 	}
@@ -93,7 +94,7 @@ public class SerializeDeserializeTree {
 		String s = sb.toString();
 		System.out.println(s);
 		
-		TreeNode root = sdt.preorderRead(null, s);
+		TreeNode root = sdt.preorderRead(s);
 		
 		System.out.println(root);
 	}

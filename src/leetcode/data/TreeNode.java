@@ -1,5 +1,7 @@
 package leetcode.data;
 
+import GeekForGeek.Interview.SerializeDeserializeTree;
+
 public class TreeNode {
     public int val;
     public TreeNode left;
@@ -8,5 +10,10 @@ public class TreeNode {
     
     public String toString(){
         return Integer.toString(val);
+    }
+    
+    public static TreeNode constructTree(String str){
+    	SerializeDeserializeTree sdt = new SerializeDeserializeTree();
+    	return sdt.preorderRead(str);
     }
 }
