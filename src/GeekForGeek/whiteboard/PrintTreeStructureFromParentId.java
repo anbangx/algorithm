@@ -29,9 +29,7 @@ public class PrintTreeStructureFromParentId {
 		// find roots
 		Set<Integer> roots = hMap.keySet();
 		roots.removeAll(nonRoot);
-		for(Integer i : roots){
-			
-		}
+
 	}
 	
 	public void bfsPrint(Set<Integer> roots, HashMap<Integer, ArrayList<Integer>> hMap){
