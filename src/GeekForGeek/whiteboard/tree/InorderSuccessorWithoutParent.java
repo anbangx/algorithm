@@ -1,4 +1,4 @@
-package GeekForGeek.whiteboard;
+package GeekForGeek.whiteboard.tree;
 
 import leetcode.data.TreeNode;
 
