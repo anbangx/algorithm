@@ -61,7 +61,7 @@ class Pair implements Comparable<Pair>{
 	
 	@Override
 	public int compareTo(Pair another) {
-		return another.val - this.val;
+		return -(another.val - this.val);
 	}
 	
 	public String toString(){
