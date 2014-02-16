@@ -9,7 +9,7 @@ public class PairSwapElements {
 	output: 2 -> 1 -> 4 ->3 
 	**/
 
-	public ListNode swapPairwise(ListNode head){
+	public ListNode swapPairwiseIteratively(ListNode head){
 	    if(head == null || head.next == null)
 	        return head;
 	    
@@ -32,6 +32,18 @@ public class PairSwapElements {
 	    return headRef.next;
 	}
 	
+	public ListNode swapPairRecursively(ListNode head){
+	    if(head == null || head.next == null)
+	        return head;
+
+	    ListNode temp = head.next;
+	    head.next = head.next.next;
+	    temp.next = head;
+	    head.next = swapPairRecursively(head.next);
+
+	    return temp;
+	}
+	
 	public static void main(String[] args) {
 		int[] A = {1, 2, 3, 4};
 		int[] B = {1, 2, 3, 4, 5};
@@ -48,7 +60,7 @@ public class PairSwapElements {
 		PairSwapElements psw = new PairSwapElements();
 		ListNode head = ListNode.convertArrayToLinkedList(array);
 		ListNode.print(head);
-		ListNode newHead = psw.swapPairwise(head);
+		ListNode newHead = psw.swapPairRecursively(head);
 		ListNode.print(newHead);
 		System.out.println("-----------------------------");
 	}
