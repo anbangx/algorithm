@@ -1,4 +1,4 @@
-package GeekForGeek.LinkedList;
+package GeekForGeek.LinkedList.Merge;
 
 import leetcode.data.ListNode;
 

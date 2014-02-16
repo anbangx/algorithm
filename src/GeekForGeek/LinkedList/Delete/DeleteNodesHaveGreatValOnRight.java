@@ -1,4 +1,4 @@
-package GeekForGeek.LinkedList;
+package GeekForGeek.LinkedList.Delete;
 
 import leetcode.data.ListNode;
 

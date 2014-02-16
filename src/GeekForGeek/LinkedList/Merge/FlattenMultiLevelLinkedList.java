@@ -1,4 +1,4 @@
-package GeekForGeek.LinkedList;
+package GeekForGeek.LinkedList.Merge;
 
 import java.util.LinkedList;
 import java.util.Queue;

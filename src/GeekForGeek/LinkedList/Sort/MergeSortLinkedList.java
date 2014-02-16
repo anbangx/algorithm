@@ -1,4 +1,4 @@
-package GeekForGeek.LinkedList;
+package GeekForGeek.LinkedList.Sort;
 
 import leetcode.data.ListNode;
 
