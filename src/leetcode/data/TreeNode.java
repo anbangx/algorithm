@@ -12,8 +12,15 @@ public class TreeNode {
         return Integer.toString(val);
     }
     
-    public static TreeNode constructTree(String str){
+    public static TreeNode constructTreeByPreorder(String str){
     	SerializeDeserializeTree sdt = new SerializeDeserializeTree();
     	return sdt.preorderRead(str);
+    }
+    
+    public static void printTree(TreeNode root){
+    	SerializeDeserializeTree sdt = new SerializeDeserializeTree();
+    	StringBuilder sb = new StringBuilder();
+    	sdt.preorderWrite(root, sb);
+    	System.out.println(sb.toString());
     }
 }

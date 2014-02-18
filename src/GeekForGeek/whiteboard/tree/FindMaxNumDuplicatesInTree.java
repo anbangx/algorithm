@@ -25,7 +25,7 @@ public class FindMaxNumDuplicatesInTree {
 	
 	public static void main(String[] args) {
 		FindMaxNumDuplicatesInTree fmn = new FindMaxNumDuplicatesInTree();
-		TreeNode root = TreeNode.constructTree("554##5##87##9##");
+		TreeNode root = TreeNode.constructTreeByPreorder("554##5##87##9##");
 		fmn.inorder(root, 0);
 		System.out.println(maxNumVal);
 	}

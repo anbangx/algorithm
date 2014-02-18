@@ -20,7 +20,7 @@ public class SumRootToLeaf {
 	}
 	
 	public static void main(String[] args) {
-		TreeNode root = TreeNode.constructTree("632##57##4##5#4##");
+		TreeNode root = TreeNode.constructTreeByPreorder("632##57##4##5#4##");
 		SumRootToLeaf s = new SumRootToLeaf();
 		s.sumRootToLeaf(root, 0);
 		System.out.println(totalSum);

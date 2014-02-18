@@ -30,10 +30,10 @@ public class PrintPostOrder {
 	
 	public static void main(String[] args) {
 		PrintPostOrder ppp = new PrintPostOrder();
-		TreeNode root = TreeNode.constructTree("124###35##6##");
+		TreeNode root = TreeNode.constructTreeByPreorder("124###35##6##");
 		ppp.printPostOrderIteratively(root);
 		System.out.println("-------------------");
-		root = TreeNode.constructTree("135##4##6##");
+		root = TreeNode.constructTreeByPreorder("135##4##6##");
 		ppp.printPostOrderIteratively(root);
 	}
 

@@ -37,7 +37,7 @@ public class SwapMistakeWithoutChangingStructure {
 		SwapMistakeWithoutChangingStructure swap = new SwapMistakeWithoutChangingStructure();
 //		TreeNode root = TreeNode.constructTree("531##6##4##");
 //		swap.swapMistake(root);
-		TreeNode root = TreeNode.constructTree("135##4##6##");
+		TreeNode root = TreeNode.constructTreeByPreorder("135##4##6##");
 		swap.swapMistake(root);
 	}
 

@@ -1,6 +1,6 @@
 package leetcode.data;
 
-public class TreeLinkNode {
+public class TreeLinkNode{
     public int val;
     public TreeLinkNode left, right, next;
 

@@ -24,7 +24,7 @@ public class PrintLevelOrder {
 	
 	public static void main(String[] args) {
 		PrintLevelOrder p = new PrintLevelOrder();
-		TreeNode root = TreeNode.constructTree("124###35##6##");
+		TreeNode root = TreeNode.constructTreeByPreorder("124###35##6##");
 		p.printLevelOrder(root);
 	}
 

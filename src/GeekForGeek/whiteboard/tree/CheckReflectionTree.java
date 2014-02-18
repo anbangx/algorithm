@@ -21,8 +21,8 @@ public class CheckReflectionTree {
 	}
 	
 	public static void main(String[] args) {
-		TreeNode root1 = TreeNode.constructTree("12#3###");
-		TreeNode root2 = TreeNode.constructTree("1#23###");
+		TreeNode root1 = TreeNode.constructTreeByPreorder("12#3###");
+		TreeNode root2 = TreeNode.constructTreeByPreorder("1#23###");
 		CheckReflectionTree crt = new CheckReflectionTree();
 		System.out.println(crt.checkReflectionTree(root1, root2));
 	}
