@@ -30,7 +30,7 @@ public class RemoveAllPathNodeWithSmallSum {
 		RemoveAllPathNodeWithSmallSum rpn = new RemoveAllPathNodeWithSmallSum();
 		TreeNode root = TreeNode.constructTreeByPreorder(str);
 		TreeNode.printTree(root);
-		TreeNode res = rpn.removePathNodes(root, 3, new Sum(0));
+		TreeNode res = rpn.removePathNodes(root, 28, new Sum(0));
 		TreeNode.printTree(res);
 	}
 
