@@ -32,7 +32,7 @@ public class ReorderList {
             pre.next = post;
             post = cur.next;
         }
-        // step3:  Do the reordering. (inset every element in the second part in between the elements in the first part)
+        // step3:  Do the reordering. (insert every element in the second part in between the elements in the first part)
         ListNode reverseHead = p.next;
         p.next = null;
         p = head;

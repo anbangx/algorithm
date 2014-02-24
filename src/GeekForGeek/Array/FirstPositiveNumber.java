@@ -18,7 +18,6 @@ public class FirstPositiveNumber {
                 swap(A, i, start++);
             }
         }
-        
         // use array index to mark occur positive
         int posLen = len - start;
         for(int i = start; i < len; i++){
