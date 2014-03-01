@@ -5,12 +5,12 @@ import java.util.LinkedList;
 import java.util.NoSuchElementException;
 import java.util.Stack;
 
-public class LinkedListIterator implements Iterator{
+public class LinkedListIterator2 implements Iterator{
     
     Iterator curIt;
     Stack<Iterator> stack;
     
-    public LinkedListIterator(LinkedList list){
+    public LinkedListIterator2(LinkedList list){
         curIt = list.iterator();
         stack = new Stack<Iterator>();
     }
@@ -31,8 +31,7 @@ public class LinkedListIterator implements Iterator{
             throw new NoSuchElementException();
         Object next = curIt.next();
         if(next instanceof Iterable){
-        	stack.push(curIt);
-        	curIt = ((Iterable) next).iterator();
+            stack.push(((Iterable) next).iterator());
             return next();
         } else{ 
             return next;
@@ -59,7 +58,7 @@ public class LinkedListIterator implements Iterator{
         list.add(7);
         list.add(8);
         System.out.println(list);
-        LinkedListIterator it = new LinkedListIterator(list);
+        LinkedListIterator2 it = new LinkedListIterator2(list);
         while(it.hasNext()){
             System.out.println(it.next());
         }
