@@ -13,7 +13,6 @@ public class MedianOfTwoSortedArray {
 		ArrayList<Integer> array = new ArrayList<Integer>();
 		Random rn = new Random();
 		int randNum = rn.nextInt() % array.size();
-		 randNum;
 	}
 
 }
